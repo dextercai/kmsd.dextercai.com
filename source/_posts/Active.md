@@ -28,7 +28,9 @@ SW_DVD9_Win_Pro_11_22H2_64BIT_ChnSimp_Pro_Ent_EDU_N_MLF_X23-12741.ISO
 
 2.执行以下命令（复制命令-右键粘贴）
 
-slmgr /skms kms.v0v.bid && slmgr /ato
+```
+slmgr /skms kms.mcdu.xyz && slmgr /ato
+```
 
 大部分情况下 你能下载到的系统镜像都是VOL版（Business版）仅需以上一步即可成功激活。
 
@@ -42,7 +44,9 @@ slmgr
 如果激活失败有两种原因：
 a.你无意中修改或卸载了系统自带的KMS激活密钥（比如你曾经使用了MAK密钥或网络上找到的其它密钥尝试激活失败）。
 解决办法：命令提示符(管理员)执行以下命令安装对应版本的KMS密钥后重新激活（密钥在文末“附1”）
+```
 slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+```
 b.你安装的系统为RTL版，需要先转换为VOL版才能激活，方法请 [特例]()。
 c.更多问题请下拉本文查看“激活失败如何排错”。
 
@@ -59,11 +63,15 @@ Windows11/10 最新零售版微软官方下载地址：https://www.microsoft.com
 点击右侧的「更改产品密钥按钮」- 输入密钥：NPPR9-FWDCX-D2C8J-H872K-2YT43
 
 如果提示密钥错误，请先输入如下密钥升级为专业版后，再输入企业版或者其它版本密钥进行升级。
+```
 VK7JG-NPHTM-C97JM-9MPGT-3V66T
+```
 
 2.激活。按提示升级后打开命令提示符(管理员)逐行执行以下命令：
+```
 slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
-slmgr /skms kms.v0v.bid && slmgr /ato
+slmgr /skms kms.mcdu.xyz && slmgr /ato
+```
 
 同样的方法可以升级为专业版、教育版等，以及版本退回切换（政府版不可逆） 。升级密钥在文末“附1”。
 
@@ -76,30 +84,44 @@ slmgr /skms kms.v0v.bid && slmgr /ato
 
 1.命令提示符(管理员)进入Office OSPP.VBS目录
 
-以 LTSC2021 64位版本为例，默认安装目录是 C:\Program Files\Microsoft Office\Office16
+以 LTSC2021 64位版本为例，默认安装目录是 ``` C:\Program Files\Microsoft Office\Office16 ```
 所以，打开命令提示符(管理员)执行以下命令进入OSPP.VBS目录
 
+```
 cd C:\Program Files\Microsoft Office\Office16
+```
 
 如果你安装的是其它版本 或者 Office安装在其它盘符和路径，参照下文自行修改命令。
 
 Office2016、Office2019、LTSC2021、Office365/Microsoft365 默认安装目录
 32位版本：
+```
 cd C:\Program Files (x86)\Microsoft Office\Office16
+```
 64位版本：
+```
 C:\Program Files\Microsoft Office\Office16
+```
 
 Office2013 默认安装目录
 32位版本：
+```
 cd C:\Program Files (x86)\Microsoft Office\Office15
+```
 64位版本：
+```
 cd C:\Program Files\Microsoft Office\Office15
+```
 
 Office2010 默认安装目录
 32位版本：
+```
 cd C:\Program Files (x86)\Microsoft Office\Office14
+```
 64位版本：
+```
 cd C:\Program Files\Microsoft Office\Office14
+```
 
 总之就是在cmd命令提示符(管理员)内 使用cd命令进入 OSPP.VBS 文件所在的目录。
 如果不确定自己安装的Office是32位还是64位，就两行命令都执行一下 不报错的就是对的。
@@ -107,20 +129,27 @@ cd C:\Program Files\Microsoft Office\Office14
 2.执行命令激活Office软件
 
 完成上一步骤后，执行以下命令。
-
-cscript ospp.vbs /sethst:kms.v0v.bid && cscript ospp.vbs /act
+```
+cscript ospp.vbs /sethst:kms.mcdu.xyz && cscript ospp.vbs /act
+```
 
 大部分情况下 你能下载到的安装包都是VOL版 仅需以上两步即可成功激活。
 
 查询Office激活详情（备用）
+```
 cscript ospp.vbs /dstatus
+```
 查看所有命令（备用）
+```
 cscript ospp.vbs
+```
 
 如果激活失败有两种原因：
 a.你无意中修改或卸载了Office自带的KMS激活密钥（比如你曾经使用了MAK密钥或网络上找到的其它密钥尝试激活失败）。
 解决办法：执行以下命令安装对应版本的KMS密钥后重新激活（密钥在文末“附2”）
+```
 cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+```
 b.你安装的为RTL版Office，需要转换为VOL版才能激活，方法请 [参照特例]()。
 c.Mac版的批量版Office不需要KMS激活，只需运行微软提供的 SWDVD5_Office_Mac_Serializer_*.ISO（相当于激活补丁，十几MB）安装即可激活。
 d.更多问题请下拉本文查看“激活失败如何排错”。
@@ -134,28 +163,34 @@ Office365/Microsoft365 最新零售版微软官方下载地址：https://www.mic
 该版本安装完默认为 Office365/Microsoft365 家庭版（RTL版）依照以下命令升级为专业版（VOL版）并激活。
 
 1.打开命令提示符(管理员)执行以下命令进入OSPP.VBS目录
+```
 cd C:\Program Files\Microsoft Office\Office16
+```
 
 2.将Office365/Microsoft365家庭版RTL版转换为专业版VOL版
 
 完成上一步骤后，执行以下命令转换版本。
-
+```
 for /f %x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
 for /f %x in ('dir /b ..\root\Licenses16\proplusvl_mak*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
-
+```
 提示：将以上代码中的“16”(Office2016 Office2019 LTSC2021 Office365/Microsoft365)改为“15”(Office2013)或者“14”(Office2010)，便可以将相对应的RTL版转换VOL版。
 
 3.安装KMS激活密钥
+```
 cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+```
 
 4.激活 Office
-cscript ospp.vbs /sethst:kms.v0v.bid && cscript ospp.vbs /act
+```
+cscript ospp.vbs /sethst:kms.mcdu.xyz && cscript ospp.vbs /act
+```
 
 全新装机请直接部署VOL版，本文末有下载链接。不推荐RTL转VOL的方式装机。
 
 #### 3.激活说明（激活原理）
 
-KMS激活是微软针对大型企业（机构、政府、学校大量采购）设计的激活系统，KMS批量激活广泛用于机房服务器操作系统和大型企业内部批量激活员工电脑，限企业内网使用。目前公开的KMS激活服务器（官方称为KMS主机）封杀力度很大，为了节省大家的时间与精力，请低调使用，转载请注明：https://v0v.bid 。
+KMS激活是微软针对大型企业（机构、政府、学校大量采购）设计的激活系统，KMS批量激活广泛用于机房服务器操作系统和大型企业内部批量激活员工电脑，限企业内网使用。
 
 微软本意为，只要某台电脑运行在购买了KMS批量授权的企业内网，该电脑便被识别为该企业所有，自动占用一个授权名额，且无需任何操作自动永久激活。当该电脑搬离出企业超过180天后自动失去授权。此方案极大的方便了企业内部电脑的授权管理、IT资产管理，其设计精妙可谓拍案叫绝！
 
@@ -181,8 +216,8 @@ KMS激活和MAK密钥激活是所有VOL版操作系统和Office套件的2种激�
 3.镜像名称中有类似 business、vol、volume、批量、大客户 这样的英文或者中文标注 都是VOL版。
 
 查看已安装的Windows或Office是否为VOL版：
-1.查验Windows 在命令提示符执行：slmgr /dlv
-2.查验Office 在命令提示符进入OSPP.VBS目录后执行：cscript ospp.vbs /dstatus
+1.查验Windows 在命令提示符执行：```slmgr /dlv```
+2.查验Office 在命令提示符进入OSPP.VBS目录后执行：```cscript ospp.vbs /dstatus```
 在“描述（DESCRIPTION）”这一行内有 VOLUME 字样就是VOL版，就是支持KMS激活。
 
 对于绝大部分用户而言，Windows11/10只要不是家庭版（home版）在使用体验上不会感受到任何区别。企业版和教育版功能最多最全最完整最容易KMS激活。
@@ -212,7 +247,9 @@ KMS激活和MAK密钥激活是所有VOL版操作系统和Office套件的2种激�
 根证书路径：
 C:\Windows\System32\spp\tokens\skus
 证书更新命令：
+```
 slmgr /rilc
+```
 
 顺便提一下"数字权利"激活吧：
 
@@ -254,15 +291,17 @@ slmgr /rilc
 VK7JG-NPHTM-C97JM-9MPGT-3V66T
 
 2.激活。按提示升级后打开命令提示符(管理员)逐行执行以下命令：
+```
 slmgr /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B
-slmgr /skms kms.v0v.bid && slmgr /ato
+slmgr /skms kms.mcdu.xyz && slmgr /ato
+```
 
 执行以下命令查看KMS激活期限
 slmgr /xpr
 
 温馨提示：
 你也可以直接使用原版 Windows10 神州网信政府版系统镜像安装系统，只需执行以下命令即可激活410年授权。
-slmgr /skms kms.v0v.bid && slmgr /ato
+slmgr /skms kms.mcdu.xyz && slmgr /ato
 支持最新的 V2022-L 版，在下文可以找到官方原版系统镜像的下载链接。
 
 通过"升级转换"方式激活的政府版事实上是一个混合版，兼具两者特性，且不具备原本政府版严格的安全策略，更适合普通用户使用。
@@ -285,16 +324,6 @@ https://answers.microsoft.com/zh-hans/windows/forum
 8.部分idc商家的服务器操作系统会遇到无法使用外网KMS激活的问题，可以尝试更换安装镜像，或者联系idc客服为你激活。
 9.本文中提到的所有命令应该在“cmd命令提示符”中执行，而非“Windows PowerShell”。当在“Windows PowerShell”中执行时，需要把“&&”替换为“;”。
 
-#检测KMS激活服务器运行状态
-下载 [vlmcs.exe](https://web.archive.org/web/20240417190908/https://v0v.bid/files/vlmcs.exe) 到C盘根目录后cmd执行以下命令：
-1.查看运行信息
-C:\vlmcs.exe -v kms.v0v.bid
-2.查看可激活版本
-C:\vlmcs.exe -x kms.v0v.bid
-3.查看帮助
-C:\vlmcs.exe -h kms.v0v.bid
-4.Windows11/10激活测试
-C:\vlmcs.exe -l 1 kms.v0v.bid
 
 #卸载 Windows KMS 激活
 打开命令提示符(管理员) 逐行执行以下命令
