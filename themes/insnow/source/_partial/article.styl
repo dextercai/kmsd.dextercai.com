@@ -1,0 +1,153 @@
+.article h1
+  margin-top: 2.4rem
+  margin-bottom: 2.2rem
+.article h2
+  margin-top: 2.2rem
+  margin-bottom: 1.8rem
+.article h3
+  margin-top: 2rem
+  margin-bottom: 1.6rem
+.article h4
+  margin-top: 1.6rem
+  margin-bottom: 1.4rem
+.article h5
+  margin-top: 1.4rem
+  margin-bottom: 1.2rem
+.article h6
+  margin-top: 1.2rem
+  margin-bottom: 1rem
+
+h1
+  font-size: 3.2rem
+h2 
+  font-size: 2.4rem
+h3
+  font-size: 2rem
+h4
+  font-size: 1.8rem
+h5
+  font-size: 1.6rem
+h6
+  font-size: 1.4rem
+p
+  font-size: 15px !important
+  line-height: 2.5rem
+  margin: 1.5rem 0
+code
+  background-color: var(--codebgColor)
+  color: var(--spColor)
+  font-family: Consolas, monospace !important;
+  font-size: 13px
+  line-height: 2.5rem
+  transition-property: background-color,color
+  transition-duration: 0.5s
+  padding: 0.2rem 0.5rem
+  border-radius: 0.25rem
+
+h1,h2,h3,h4,h5,h6,p,a
+  font-family: var(--global-font-family)
+  color: var(--fontColor)
+  transition: color 0.5s
+
+pre
+  margin: 1.5rem 0 !important
+  transition-property: background-color,color
+  transition-duration: 0.5s
+
+pre code
+  font-family: 'JetBrains Mono', monospace !important;
+  padding: 0
+
+.article>ul
+  margin: 1.5rem 0
+
+.article>ol
+  margin: 1.5rem 0
+
+.article ul
+  padding-inline-start: 2rem
+
+.article ol
+  padding-inline-start: 2rem
+
+ul p
+  margin: 0
+
+ol p
+  margin: 0
+
+.article li
+  font-family: var(--global-font-family)
+  font-size: 1.5rem
+  line-height: 2.5rem
+  color: var(--fontColor)
+  transition: color 0.5s
+
+.article>blockquote
+  padding-right: 2rem
+
+blockquote
+  background-color: var(--bgColor2)
+  padding-inline-start: 2rem
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
+  border-left: 2px solid var(--spColor)
+  margin: 1.5rem 0
+  transition-property: background-color,color,border-color
+  transition-duration: 0.5s
+
+.article-table
+  max-width: 100%
+  margin: 1.5rem 0
+  overflow: auto
+
+table
+  font-size: 1.5rem
+  font-family: var(--global-font-family)
+  transition-property: background-color,color
+  transition-duration: 0.5s
+  border-collapse: separate
+  border-spacing: 0
+
+thead
+  background: var(--bgColor2)
+  color: var(--fontColor)
+  transition-property: background-color,color
+  transition-duration: 0.5s
+
+tbody
+  color: var(--fontColor)
+  transition-property: background-color,color
+  transition-duration: 0.5s
+
+th,td
+  padding: 1.6rem
+  border-bottom: 1px solid var(--tbborder)
+  position: relative
+  transition-property: border-color
+  transition-duration: 0.5s
+
+th:not(:last-child)::before
+  position: absolute
+  top: 50%
+  right: 0
+  width: 1px
+  height: 2rem
+  background-color: var(--tbborder)
+  transform: translateY(-50%)
+  transition: background-color .5s
+  content: "";
+
+del,u
+  transition: text-decoration 0.5s
+
+hr
+  height: 1px
+  background-color: var(--tbborder)
+  margin: 1.5rem 0
+
+.article img
+  max-width: 100%
+  display: block
+
+

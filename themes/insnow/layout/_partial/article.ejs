@@ -1,0 +1,8 @@
+<div class="article">
+  <%
+    let content=page.content
+    content = content.replace(/<table>/g,'<div class="article-table"><table>')
+    content = content.replace(/<\/table>/g,'</table></div>')
+  %>
+  <%- content %>
+</div>

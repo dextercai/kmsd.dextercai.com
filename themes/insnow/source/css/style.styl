@@ -1,0 +1,210 @@
+.dark
+  --bgColor: #181818
+  --fontColor: silver
+  --bgColor2: #2b2b2b
+  --spColor: rgb(245, 154, 169)
+  --tbborder: #7a7a7a
+  --codebgColor: rgba(255, 255, 255, 0.06)
+
+.light
+  --bgColor: #fff
+  --fontColor: #000
+  --bgColor2: #fafafa
+  --spColor: #3999ff
+  --tbborder: #ebebeb
+  --codebgColor: rgba(0, 0, 0, 0.02)
+
+html
+  font-size: 62.5%
+  -webkit-text-size-adjust: none;
+  --global-font-family: 'Noto Sans SC', sans-serif
+
+@keyframes main-up {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+body
+  background-color: var(--bgColor)
+  transition-property: background-color,color
+  transition-duration: 0.5s
+
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+  border: none
+
+.main-body a
+  color: var(--spColor)
+  transition: color 0.5s
+
+.show-area
+  width: 65rem
+  margin: auto
+  margin-top: 5rem
+
+.main-body
+  margin-top: 2rem;
+  animation-name: main-up
+  animation-duration: 0.5s
+  animation-timing-function: ease-out
+
+.blog-title
+  margin: 0 
+
+.blog-desc
+  margin-bottom: 1rem
+  font-weight: normal
+  text-align: justify
+
+.blog-info
+  text-align: justify
+
+.posts-header
+  margin: 1.5rem 0
+
+.toc-container
+  width: 100%
+  position: sticky
+  top: 0
+  z-index: 999
+  pointer-events: none
+
+.toc-toggle
+  margin-left: auto
+  width: 5rem
+  height: 5rem
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: var(--bgColor)
+  pointer-events: auto
+  transition-property: background-color,box-shadow
+  transition-duration: 0.5s
+  box-shadow: 1px 0 var(--bgColor)
+
+.toc-toggle i
+  cursor: pointer
+  pointer-events: auto
+  color: var(--fontColor)
+  transition: color 0.5s
+
+.toc
+  display: none
+  list-style: none
+  background-color: var(--bgColor)
+  pointer-events: auto
+  transition-property: background-color,color,box-shadow
+  transition-duration: 0.5s
+
+.show
+  display: block
+
+.toc-child
+  list-style: none
+  padding-inline-start: 2rem
+
+.toc a
+  text-decoration: none
+  font-size: 1.4rem
+
+.article
+  text-align: justify
+
+.article-header
+  margin-bottom: 2rem
+
+.article-details
+  margin-top: 3rem
+  display: flex
+  font-size: 1.2rem
+  justify-content: space-between
+
+.article-post-date
+  font-family: var(--global-font-family)
+  color: var(--fontColor)
+  transition: color 0.5s
+
+.article-details a
+  text-decoration: none
+
+a[class^='tag-']
+  text-decoration: none
+  padding: 0.25rem
+
+.page-title
+  margin-bottom: 2rem
+
+.category-list-item::marker
+  content: none
+
+.category-list-item
+  display: flex
+  justify-content: space-between
+  margin: 1.5rem 0
+
+.category-list-link
+  font-size: 1.6rem
+  text-decoration: none
+
+.category-list-count
+  font-size: 1.6rem
+  font-family: var(--global-font-family)
+  color: var(--fontColor)
+
+.tag-cloud-container
+  margin: 1.5rem 0
+
+footer
+  display: flex
+  justify-content: space-between
+  padding: 2rem 0
+  font-size: 1.3rem 
+
+.footer-info
+  font-family: var(--global-font-family)
+  color: var(--fontColor)
+  transition: color 0.5s
+  padding: 0.5rem 0
+
+.footer-info a
+  text-decoration: none
+  color: var(--fontColor)
+
+.footer-info a:hover
+  color: var(--spColor)
+
+.footer-i
+  margin-left: 1rem
+
+.footer-i i
+  font-size: 1.4rem 
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.7);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(128, 128, 128, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(128, 128, 128);
+}
+
+@import '../_partial/header.styl'
+@import '../_partial/article.styl'
+@import '../_partial/archive.styl'
+@import './adapt.styl';

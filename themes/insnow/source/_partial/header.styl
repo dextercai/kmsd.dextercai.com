@@ -1,0 +1,50 @@
+header
+  width: 100%
+  height: 5rem
+  display: flex
+  align-items: center
+  position: sticky
+  top: 0
+  background-color: var(--bgColor)
+  box-shadow: 0 -1px var(--bgColor);
+  z-index: 998
+  transition-property: background-color,color,box-shadow
+  transition-duration: 0.5s
+
+.nav 
+  display: flex
+  list-style: none
+  flex-grow: 1
+  overflow: scroll
+
+.nav::-webkit-scrollbar
+  display: none
+
+.nav-child
+  font-size: 1.5rem
+  margin-right: 2rem
+  cursor: pointer
+  font-family: var(--global-font-family)
+
+.nav-child a
+  color: var(--fontColor)
+  text-decoration: none
+  transition: color 0.5s
+  white-space:nowrap
+.nav-child a:visited
+  color: var(--fontColor)
+.nav-child a:hover
+  color: var(--spColor)
+
+
+.theme-switcher
+  width: 5rem
+  height: 5rem
+  font-size: 4rem
+  display: flex
+  line-height: 4.6rem
+  justify-content: center
+  cursor: pointer
+  overflow: hidden
+  border-radius: 999px
+  margin-left: 1rem
